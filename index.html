@@ -29,9 +29,53 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h1>
-<a name="mojo-auth" class="anchor" href="#mojo-auth"><span class="octicon octicon-link"></span></a>mojo-auth</h1>
+<a name="mojoauth" class="anchor" href="#mojoauth"><span class="octicon octicon-link"></span></a>MojoAuth</h1>
 
-<p>MojoAuth is a set of standard approaches to cross-app authentication based on HMAC</p>
+<p>MojoAuth is a set of standard approaches to cross-app authentication based on <a href="http://en.wikipedia.org/wiki/Hash-based_message_authentication_code">HMAC</a> which is specified in <a href="https://www.ietf.org/rfc/rfc2104.txt">RFC2104</a>.</p>
+
+<h2>
+<a name="why-does-mojoauth-exist" class="anchor" href="#why-does-mojoauth-exist"><span class="octicon octicon-link"></span></a>Why does MojoAuth exist?</h2>
+
+<p><a href="http://mojolingo.com">Mojo Lingo</a> regularly implements multi-faceted real time communications applications which bring together a large number of separate, individually complex technologies to produce a useful consumer experience. These kind of projects regularly include situations where an un-trusted client, such as a user's web browser, must communicate directly with more than one back-end system, including SIP, XMPP and TURN servers, as well as the front-end application server, and must do so in an authenticated manner.</p>
+
+<p>These situations present a problem with authentication. How does the un-trusted client prove its identity to many separate systems? In the most simple implementation, a client must submit a username and password through the browser's UI in order to initialize the connections to each separate system, but this is a complex and ugly user experience and requires close coordination of user databases between the backend systems.</p>
+
+<p>In order to create a better user experience, developers then go looking for a way to share an authenticated session between disparate systems. One of the easiest ways of implementing this is to expose some plain-text credentials from the front-end application server to the client, which the client then uses to authenticate with the other back-end systems. Exposing long-lived credentials like this is a security risk, and this assumes that those credentials must somehow be synchronised across all back-end systems, which can be excessively complex.</p>
+
+<p>MojoAuth exists to wrap up an easy-to-remember name, high-level documentation and recommendations, library implementations and industry standards in order to avoid decision overhead and reinventing of the wheel in projects that Mojo Lingo is involved in, and at the same time solving the coordination and security problems inherant in the simple solutions as described above.</p>
+
+<p>MojoAuth is the thing we intend to point our own staff and our clients at when the question of cross-service authentication arises, expecting that it will be used in the majority of cases.</p>
+
+<h2>
+<a name="did-mojo-lingo-invent-the-technology-behind-mojoauth" class="anchor" href="#did-mojo-lingo-invent-the-technology-behind-mojoauth"><span class="octicon octicon-link"></span></a>Did Mojo Lingo invent the technology behind MojoAuth?</h2>
+
+<p>No. MojoAuth is based on ideas taken from <a href="https://tools.ietf.org/html/draft-uberti-behave-turn-rest-00">draft-uberti-behave-turn-rest</a> by Justin Uberti of Google's WebRTC team. All credit for devising and specifying the behaviour of MojoAuth belongs to Justin / Google, and Mojo Lingo are eternally grateful for Justin's contributions to this industry and it's open-source and standards communities.</p>
+
+<h2>
+<a name="how-does-mojoauth-work" class="anchor" href="#how-does-mojoauth-work"><span class="octicon octicon-link"></span></a>How does MojoAuth work?</h2>
+
+<h2>
+<a name="how-do-i-implement-mojoauth" class="anchor" href="#how-do-i-implement-mojoauth"><span class="octicon octicon-link"></span></a>How do I implement MojoAuth?</h2>
+
+<h3>
+<a name="libraries" class="anchor" href="#libraries"><span class="octicon octicon-link"></span></a>Libraries</h3>
+
+<p>MojoAuth is implemented in handy little libraries in a collection of programming languages below:</p>
+
+<ul>
+<li><a href="https://github.com/mojolingo/mojo-auth.rb">Ruby</a></li>
+</ul><h3>
+<a name="sip" class="anchor" href="#sip"><span class="octicon octicon-link"></span></a>SIP</h3>
+
+<p><a href="http://www.kamailio.org/w/">Kamailio</a>, the popular SIP server has a MojoAuth compatible authentication module, <a href="http://kamailio.org/docs/modules/4.1.x/modules/auth_ephemeral.html">auth_ephemeral</a> which is very easy to use.</p>
+
+<h3>
+<a name="turn" class="anchor" href="#turn"><span class="octicon octicon-link"></span></a>TURN</h3>
+
+<p>The <a href="https://code.google.com/p/rfc5766-turn-server/">most popular open-source TURN server implementation, rfc5766-turn-server</a> supports MojoAuth and can be <a href="https://code.google.com/p/rfc5766-turn-server/wiki/turnserver#TURN_REST_API">easily configured to enable it</a>.</p>
+
+<h3>
+<a name="xmpp" class="anchor" href="#xmpp"><span class="octicon octicon-link"></span></a>XMPP</h3>
         </section>
 
         <aside id="sidebar">
