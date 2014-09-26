@@ -32,10 +32,10 @@ MojoAuth is implemented in handy little libraries in a collection of programming
 
 ### SIP
 
-[Kamailio](http://www.kamailio.org/w/), the popular SIP server has a MojoAuth compatible authentication module, [auth_ephemeral](http://kamailio.org/docs/modules/4.1.x/modules/auth_ephemeral.html) which is very easy to use.
+[Kamailio](http://www.kamailio.org/w/), the popular SIP server, has a MojoAuth compatible authentication module, [auth_ephemeral](http://kamailio.org/docs/modules/4.1.x/modules/auth_ephemeral.html) which is very easy to use.
 
 ### TURN
 
-The [most popular open-source TURN server implementation, rfc5766-turn-server](https://code.google.com/p/rfc5766-turn-server/) supports MojoAuth and can be [easily configured to enable it](https://code.google.com/p/rfc5766-turn-server/wiki/turnserver#TURN_REST_API).
+The most popular open-source TURN server implementation, [rfc5766-turn-server](https://code.google.com/p/rfc5766-turn-server/) supports MojoAuth and can be [easily configured to enable it](https://code.google.com/p/rfc5766-turn-server/wiki/turnserver#TURN_REST_API).
 
 ### XMPP
