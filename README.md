@@ -39,6 +39,8 @@ Its downside is that is also does not permit revocation of credentials without i
 MojoAuth is implemented in handy little libraries in a collection of programming languages. Each of these libraries has its own usage documentation. An example application (a Rails app serving a WebRTC-based calling service backed by Kamailio and rfc5766-turn-server) is [available to demonstrate usage](https://github.com/mojolingo/mojo-auth).
 
 * [Ruby](https://github.com/mojolingo/mojo-auth.rb)
+* [Go](https://github.com/mojolingo/mojoauth.go)
+* [Erlang](https://github.com/mojolingo/mojoauth.erl)
 
 ### SIP
 
