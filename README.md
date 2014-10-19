@@ -41,6 +41,7 @@ MojoAuth is implemented in handy little libraries in a collection of programming
 * [Ruby](https://github.com/mojolingo/mojo-auth.rb)
 * [Go](https://github.com/mojolingo/mojoauth.go)
 * [Erlang](https://github.com/mojolingo/mojoauth.erl)
+* [Elixir](https://hex.pm/packages/mojoauth)
 * [Node.js](https://www.npmjs.org/package/mojo-auth.js)
 
 ### SIP
