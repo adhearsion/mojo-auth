@@ -53,3 +53,5 @@ MojoAuth is implemented in handy little libraries in a collection of programming
 The most popular open-source TURN server implementation, [rfc5766-turn-server](https://code.google.com/p/rfc5766-turn-server/) supports MojoAuth and can be [easily configured to enable it](https://code.google.com/p/rfc5766-turn-server/wiki/turnserver#TURN_REST_API).
 
 ### XMPP
+
+XMPP [makes use of SASL authentication](https://tools.ietf.org/html/rfc6120#section-6), which permits the supply of separate `authzid` (Authorization identity) and `authcid` (Authentication identity), and can thus support MojoAuth. ejabberd [got support for MojoAuth](https://github.com/processone/ejabberd/pull/525) in 2015.
