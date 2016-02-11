@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>MojoAuth by mojolingo</title>
+    <title>MojoAuth by adhearsion</title>
   </head>
 
   <body>
@@ -21,7 +21,7 @@
       <div class="inner">
         <h1>MojoAuth</h1>
         <h2>MojoAuth is a set of standard approaches to cross-app authentication based on HMAC</h2>
-        <a href="https://github.com/mojolingo/mojo-auth" class="button"><small>View project on</small> GitHub</a>
+        <a href="https://github.com/adhearsion/mojo-auth" class="button"><small>View project on</small> GitHub</a>
       </div>
     </header>
 
@@ -29,12 +29,12 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h1>
-<a id="mojoauth" class="anchor" href="#mojoauth" aria-hidden="true"><span class="octicon octicon-link"></span></a>MojoAuth</h1>
+<a id="mojoauth" class="anchor" href="#mojoauth" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MojoAuth</h1>
 
 <p>MojoAuth is a set of standard approaches to cross-app authentication based on <a href="http://en.wikipedia.org/wiki/Hash-based_message_authentication_code">HMAC</a> which is specified in <a href="https://www.ietf.org/rfc/rfc2104.txt">RFC2104</a>.</p>
 
 <h2>
-<a id="why-does-mojoauth-exist" class="anchor" href="#why-does-mojoauth-exist" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why does MojoAuth exist?</h2>
+<a id="why-does-mojoauth-exist" class="anchor" href="#why-does-mojoauth-exist" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why does MojoAuth exist?</h2>
 
 <p><a href="http://mojolingo.com">Mojo Lingo</a> regularly implements multi-faceted real time communications applications which bring together a large number of separate, individually complex technologies to produce a useful consumer experience. These kind of projects regularly include situations where an un-trusted client, such as a user's web browser, must communicate directly with more than one back-end system, including SIP, XMPP and TURN servers, as well as the front-end application server, and must do so in an authenticated manner.</p>
 
@@ -47,12 +47,12 @@
 <p>MojoAuth is the thing we intend to point our own staff and our clients at when the question of cross-service authentication arises, expecting that it will be used in the majority of cases.</p>
 
 <h2>
-<a id="did-mojo-lingo-invent-the-technology-behind-mojoauth" class="anchor" href="#did-mojo-lingo-invent-the-technology-behind-mojoauth" aria-hidden="true"><span class="octicon octicon-link"></span></a>Did Mojo Lingo invent the technology behind MojoAuth?</h2>
+<a id="did-mojo-lingo-invent-the-technology-behind-mojoauth" class="anchor" href="#did-mojo-lingo-invent-the-technology-behind-mojoauth" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Did Mojo Lingo invent the technology behind MojoAuth?</h2>
 
 <p>No. MojoAuth is based on ideas taken from <a href="https://tools.ietf.org/html/draft-uberti-behave-turn-rest-00">draft-uberti-behave-turn-rest</a> by Justin Uberti of Google's WebRTC team. All credit for devising and specifying the behaviour of MojoAuth belongs to Justin / Google, and Mojo Lingo are eternally grateful for Justin's contributions to this industry and it's open-source and standards communities.</p>
 
 <h2>
-<a id="how-does-mojoauth-work" class="anchor" href="#how-does-mojoauth-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>How does MojoAuth work?</h2>
+<a id="how-does-mojoauth-work" class="anchor" href="#how-does-mojoauth-work" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How does MojoAuth work?</h2>
 
 <p>Authentication flow using MojoAuth goes something like this:</p>
 
@@ -78,45 +78,45 @@
 <p>Its downside is that is also does not permit revocation of credentials without invalidating <em>all</em> credentials in flight by changing the secret key. This is a feature typically only available to a more complex approach involving <a href="http://en.wikipedia.org/wiki/Public_key_infrastructure">PKI</a>, but it is suggested that the simplicity of this approach outweighs this limitation in a large number of cases.</p>
 
 <h2>
-<a id="how-do-i-implement-mojoauth" class="anchor" href="#how-do-i-implement-mojoauth" aria-hidden="true"><span class="octicon octicon-link"></span></a>How do I implement MojoAuth?</h2>
+<a id="how-do-i-implement-mojoauth" class="anchor" href="#how-do-i-implement-mojoauth" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How do I implement MojoAuth?</h2>
 
-<p>MojoAuth is implemented in handy little libraries in a collection of programming languages. Each of these libraries has its own usage documentation. An example application (a Rails app serving a WebRTC-based calling service backed by Kamailio and rfc5766-turn-server) is <a href="https://github.com/mojolingo/mojo-auth">available to demonstrate usage</a>.</p>
+<p>MojoAuth is implemented in handy little libraries in a collection of programming languages. Each of these libraries has its own usage documentation. An example application (a Rails app serving a WebRTC-based calling service backed by Kamailio and rfc5766-turn-server) is <a href="https://github.com/adhearsion/mojo-auth">available to demonstrate usage</a>.</p>
 
 <ul>
 <li><a href="https://rubygems.org/gems/mojo_auth">Ruby</a></li>
-<li><a href="https://github.com/mojolingo/mojoauth.go">Go</a></li>
-<li><a href="https://github.com/mojolingo/mojoauth.erl">Erlang</a></li>
+<li><a href="https://github.com/adhearsion/mojoauth.go">Go</a></li>
+<li><a href="https://github.com/adhearsion/mojoauth.erl">Erlang</a></li>
 <li><a href="https://hex.pm/packages/mojoauth">Elixir</a></li>
 <li><a href="https://www.npmjs.org/package/mojo-auth.js">Node.js</a></li>
 </ul>
 
 <h3>
-<a id="sip" class="anchor" href="#sip" aria-hidden="true"><span class="octicon octicon-link"></span></a>SIP</h3>
+<a id="sip" class="anchor" href="#sip" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SIP</h3>
 
 <p><a href="http://www.kamailio.org/w/">Kamailio</a>, the popular SIP server, has a MojoAuth compatible authentication module, <a href="http://kamailio.org/docs/modules/4.1.x/modules/auth_ephemeral.html">auth_ephemeral</a> which is very easy to use.</p>
 
 <h3>
-<a id="turn" class="anchor" href="#turn" aria-hidden="true"><span class="octicon octicon-link"></span></a>TURN</h3>
+<a id="turn" class="anchor" href="#turn" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TURN</h3>
 
 <p>The most popular open-source TURN server implementation, <a href="https://code.google.com/p/rfc5766-turn-server/">rfc5766-turn-server</a> supports MojoAuth and can be <a href="https://code.google.com/p/rfc5766-turn-server/wiki/turnserver#TURN_REST_API">easily configured to enable it</a>.</p>
 
 <h3>
-<a id="xmpp" class="anchor" href="#xmpp" aria-hidden="true"><span class="octicon octicon-link"></span></a>XMPP</h3>
+<a id="xmpp" class="anchor" href="#xmpp" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>XMPP</h3>
 
 <p>XMPP <a href="https://tools.ietf.org/html/rfc6120#section-6">makes use of SASL authentication</a>, which permits the supply of separate <code>authzid</code> (Authorization identity) and <code>authcid</code> (Authentication identity), and can thus support MojoAuth. ejabberd <a href="https://github.com/processone/ejabberd/pull/525">got support for MojoAuth</a> in 2015.</p>
         </section>
 
         <aside id="sidebar">
-          <a href="https://github.com/mojolingo/mojo-auth/zipball/master" class="button">
+          <a href="https://github.com/adhearsion/mojo-auth/zipball/master" class="button">
             <small>Download</small>
             .zip file
           </a>
-          <a href="https://github.com/mojolingo/mojo-auth/tarball/master" class="button">
+          <a href="https://github.com/adhearsion/mojo-auth/tarball/master" class="button">
             <small>Download</small>
             .tar.gz file
           </a>
 
-          <p class="repo-owner"><a href="https://github.com/mojolingo/mojo-auth"></a> is maintained by <a href="https://github.com/mojolingo">mojolingo</a>.</p>
+          <p class="repo-owner"><a href="https://github.com/adhearsion/mojo-auth"></a> is maintained by <a href="https://github.com/adhearsion">adhearsion</a>.</p>
 
           <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
         </aside>
