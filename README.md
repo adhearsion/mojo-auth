@@ -36,11 +36,11 @@ Its downside is that is also does not permit revocation of credentials without i
 
 ## How do I implement MojoAuth?
 
-MojoAuth is implemented in handy little libraries in a collection of programming languages. Each of these libraries has its own usage documentation. An example application (a Rails app serving a WebRTC-based calling service backed by Kamailio and rfc5766-turn-server) is [available to demonstrate usage](https://github.com/mojolingo/mojo-auth).
+MojoAuth is implemented in handy little libraries in a collection of programming languages. Each of these libraries has its own usage documentation. An example application (a Rails app serving a WebRTC-based calling service backed by Kamailio and rfc5766-turn-server) is [available to demonstrate usage](https://github.com/adhearsion/mojo-auth).
 
 * [Ruby](https://rubygems.org/gems/mojo_auth)
-* [Go](https://github.com/mojolingo/mojoauth.go)
-* [Erlang](https://github.com/mojolingo/mojoauth.erl)
+* [Go](https://github.com/adhearsion/mojoauth.go)
+* [Erlang](https://github.com/adhearsion/mojoauth.erl)
 * [Elixir](https://hex.pm/packages/mojoauth)
 * [Node.js](https://www.npmjs.org/package/mojo-auth.js)
 
